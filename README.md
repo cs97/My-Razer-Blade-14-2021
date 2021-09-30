@@ -12,9 +12,18 @@ mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img
 dracut /boot/initramfs-$(uname -r).img $(uname -r)
 ```
 ```
-
+runlevel-switch.sh -m
+```
+```
+sudo su
 ```
 
+```
+./NVIDIA-Linux-*.run
+```
+```
+runlevel-switch.sh -g
+```
 
 
 
