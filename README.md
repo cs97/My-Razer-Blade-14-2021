@@ -23,7 +23,9 @@ RemainAfterExit=yes
 [Install]
 WantedBy=multi-user.target
 ```
-
-
+```
+systemctl start noturbo
+systemctl enable noturbo
+```
 
 
