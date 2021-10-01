@@ -2,7 +2,6 @@
 # TEST !!!
 
 
-### FEDORA 35
 
 nano /et/systemd/system/noturbo.service
 ```
