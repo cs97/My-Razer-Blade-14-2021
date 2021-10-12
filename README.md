@@ -8,7 +8,7 @@ pip3 install torch==1.9.1+cu111 torchvision==0.10.1+cu111 torchaudio==0.9.1 -f h
 
 
 ### eco mode
-nano /et/systemd/system/noturbo.service
+nano /etc/systemd/system/noturbo.service
 ```
 [Unit]
 Description=NoTurbo
