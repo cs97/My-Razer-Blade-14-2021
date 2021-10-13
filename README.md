@@ -27,5 +27,12 @@ WantedBy=multi-user.target
 systemctl start noturbo
 systemctl enable noturbo
 ```
+### prime-run
+nano /usr/bin/prime-run
+```
+#!/bin/bash
+__NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=NVIDIA_only __GLX_VENDOR_LIBRARY_NAME=nvidia "$@"
+```
+
 
 
