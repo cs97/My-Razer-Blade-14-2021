@@ -27,6 +27,25 @@ WantedBy=multi-user.target
 systemctl start noturbo
 systemctl enable noturbo
 ```
+
+nano /etc/systemd/system/nvidia-eco.service
+```
+[Unit]
+Description=nvidia-eco
+
+[Service]
+Type=oneshot
+
+ExecStart=/bin/sh -c "nvidia-smi -lgc 210,1200"
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+```
+```
+systemctl start nvidia-eco
+systemctl enable nvidia-eco
+```
 ### prime-run
 nano /usr/bin/prime-run
 ```
