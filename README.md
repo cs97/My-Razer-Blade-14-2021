@@ -37,6 +37,7 @@ Description=nvidia-eco
 Type=oneshot
 
 ExecStart=/bin/sh -c "nvidia-smi -lgc 210,1200"
+ExecStop=/bin/sh -c "nvidia-smi -rgc"
 RemainAfterExit=yes
 
 [Install]
