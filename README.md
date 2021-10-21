@@ -36,8 +36,8 @@ Description=nvidia-eco
 [Service]
 Type=oneshot
 
-ExecStart=/bin/sh -c "nvidia-smi -lgc 210,1200"
-ExecStop=/bin/sh -c "nvidia-smi -rgc"
+ExecStart=/bin/sh -c "nvidia-smi -lgc 210,1200 && nvidia-smi -lmc 400,6000"
+ExecStop=/bin/sh -c "nvidia-smi -rgc && nvidia-smi -rmc"
 RemainAfterExit=yes
 
 [Install]
