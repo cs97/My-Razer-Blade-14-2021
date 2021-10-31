@@ -41,7 +41,7 @@ ExecStop=/bin/sh -c "nvidia-smi -rgc && nvidia-smi -rmc"
 RemainAfterExit=yes
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=graphical.target
 ```
 ```
 systemctl start nvidia-eco
