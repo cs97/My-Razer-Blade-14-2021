@@ -39,6 +39,7 @@ Type=oneshot
 ExecStart=/bin/sh -c "nvidia-smi -lgc 210,1200 && nvidia-smi -lmc 400,5800"
 ExecStop=/bin/sh -c "nvidia-smi -rgc && nvidia-smi -rmc"
 RemainAfterExit=yes
+ExecStartPre=/bin/sleep 10
 
 [Install]
 WantedBy=graphical.target
