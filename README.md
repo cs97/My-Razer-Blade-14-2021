@@ -5,7 +5,10 @@
 ```
 pip3 install torch==1.9.1+cu111 torchvision==0.10.1+cu111 torchaudio==0.9.1 -f https://download.pytorch.org/whl/torch_stable.html
 ```
-
+OR
+```
+pip3 install --pre torch torchvision torchaudio -f https://download.pytorch.org/whl/nightly/cu113/torch_nightly.html
+```
 
 ### eco mode
 nano /etc/systemd/system/noturbo.service
