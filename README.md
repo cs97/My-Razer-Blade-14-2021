@@ -39,8 +39,8 @@ Description=LowTurbo
 [Service]
 Type=oneshot
 
-ExecStart=/bin/sh -c "/usr/bin/cpupower frequency-set --max 4000MHz
-ExecStop=/bin/sh -c "/usr/bin/cpupower frequency-set --max 4600MHz
+ExecStart=/bin/sh -c "/usr/bin/cpupower frequency-set --max 4000MHz"
+ExecStop=/bin/sh -c "/usr/bin/cpupower frequency-set --max 4600MHz"
 RemainAfterExit=yes
 
 [Install]
