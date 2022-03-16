@@ -40,6 +40,7 @@ Description=LowTurbo
 Type=oneshot
 
 ExecStart=/bin/sh -c "/usr/bin/cpupower frequency-set --max 4000MHz"
+ExecStartPost=/bin/sh -c "cpupower frequency-set --governor conservative"
 ExecStop=/bin/sh -c "/usr/bin/cpupower frequency-set --max 4600MHz"
 RemainAfterExit=yes
 
