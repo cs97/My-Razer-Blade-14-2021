@@ -3,6 +3,9 @@
 
 ### Kernel
 ```
+General setup  --->
+    Compiler optimization level (Optimize for performance (-Os))  --->
+    
 Processor type and features  --->
     Processor family (AMD Zen 3)
 
