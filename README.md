@@ -17,6 +17,8 @@ Power management and ACPI options  --->
 Device Drivers  --->
     Graphics support  ---> 
         < > Nouveau (NVIDIA) cards
+    [*] X86 Platform Specific Device Drivers  --->
+        <*>   AMD SoC PMC driver
         
     HID support  --->
         I2C HID support  --->
