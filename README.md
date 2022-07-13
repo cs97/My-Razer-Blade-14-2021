@@ -64,7 +64,7 @@ Description=LowTurbo
 [Service]
 Type=oneshot
 
-ExecStart=/bin/sh -c "cpupower frequency-set --max 3800MHz && pupower frequency-set --min 1000MHz"
+ExecStart=/bin/sh -c "cpupower frequency-set --max 3800MHz && cpupower frequency-set --min 1000MHz"
 ExecStartPost=/bin/sh -c "cpupower frequency-set --governor conservative"
 ExecStop=/bin/sh -c "cpupower frequency-set --max 4600MHz"
 ExecStopPost=/bin/sh -c "cpupower frequency-set --governor schedutil"
