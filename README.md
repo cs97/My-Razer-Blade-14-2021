@@ -36,15 +36,17 @@ pip3 install --pre torch torchvision torchaudio -f https://download.pytorch.org/
 ```
 
 ### eco mode
-nano /etc/systemd/system/noturbo.service
+cp powermode.sh /usr/bin/powermode
+
+nano /etc/systemd/system/powermode.service
 ```
 [Unit]
-Description=NoTurbo
+Description=PowerMode
 
 [Service]
 Type=oneshot
 
-ExecStart=/bin/sh -c "/usr/bin/echo 0 > /sys/devices/system/cpu/cpufreq/boost"
+ExecStart=/bin/sh -c "/usr/bin/powermode powersave"
 ExecStop=/bin/sh -c "/usr/bin/echo 1 > /sys/devices/system/cpu/cpufreq/boost"
 RemainAfterExit=yes
 
@@ -52,53 +54,11 @@ RemainAfterExit=yes
 WantedBy=multi-user.target
 ```
 ```
-systemctl start noturbo
-systemctl enable noturbo
+systemctl start powermode
+systemctl enable powermode
 ```
 
-nano /etc/systemd/system/lowturbo.service
-```
-[Unit]
-Description=LowTurbo
 
-[Service]
-Type=oneshot
-
-ExecStart=/bin/sh -c "cpupower frequency-set --max 3800MHz && cpupower frequency-set --min 1000MHz"
-ExecStartPost=/bin/sh -c "cpupower frequency-set --governor conservative"
-ExecStop=/bin/sh -c "cpupower frequency-set --max 4600MHz"
-ExecStopPost=/bin/sh -c "cpupower frequency-set --governor schedutil"
-
-RemainAfterExit=yes
-
-[Install]
-WantedBy=multi-user.target
-```
-```
-systemctl start lowturbo
-systemctl enable lowturbo
-```
-
-nano /etc/systemd/system/nvidia-eco.service
-```
-[Unit]
-Description=nvidia-eco
-
-[Service]
-Type=oneshot
-
-ExecStart=/bin/sh -c "nvidia-smi -lgc 210,1200 && nvidia-smi -lmc 400,5800"
-ExecStop=/bin/sh -c "nvidia-smi -rgc && nvidia-smi -rmc"
-RemainAfterExit=yes
-ExecStartPre=/bin/sleep 10
-
-[Install]
-WantedBy=graphical.target
-```
-```
-systemctl start nvidia-eco
-systemctl enable nvidia-eco
-```
 ### prime-run
 nano /usr/bin/prime-run
 ```
