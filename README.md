@@ -47,7 +47,7 @@ Description=PowerMode
 Type=oneshot
 
 ExecStart=/bin/sh -c "/usr/bin/powermode powersave"
-ExecStop=/bin/sh -c "/usr/bin/echo 1 > /sys/devices/system/cpu/cpufreq/boost"
+ExecStop=/bin/sh -c "/usr/bin/powermode powersave"
 RemainAfterExit=yes
 
 [Install]
