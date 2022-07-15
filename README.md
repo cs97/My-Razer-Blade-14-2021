@@ -36,7 +36,7 @@ pip3 install --pre torch torchvision torchaudio -f https://download.pytorch.org/
 ```
 
 ### eco mode
-cp powermode.sh /usr/bin/powermode
+* cp powermode.sh /usr/bin/powermode
 
 nano /etc/systemd/system/powermode.service
 ```
