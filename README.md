@@ -1,7 +1,7 @@
 
 # Razer Blade 14 2021
 
-### Kernel
+## Kernel
 ```
 General setup  --->
     Compiler optimization level (Optimize for performance (-Os))  --->
@@ -26,7 +26,7 @@ Device Drivers  --->
 
 ```
 
-### pytorch
+## pytorch
 ```
 pip3 install torch==1.10.2+cu113 torchvision==0.11.3+cu113 torchaudio==0.10.2+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
 ```
@@ -35,9 +35,17 @@ OR
 pip3 install --pre torch torchvision torchaudio -f https://download.pytorch.org/whl/nightly/cu113/torch_nightly.html
 ```
 
-### eco mode
+## powermode
+
+### Installing
 * cp powermode.sh /usr/bin/powermode
 
+### Usage
+* powermode powersave
+* powermode balanced
+* powermode performance
+
+### powermode service
 nano /etc/systemd/system/powermode.service
 ```
 [Unit]
@@ -59,7 +67,7 @@ systemctl enable powermode
 ```
 
 
-### prime-run
+## prime-run
 nano /usr/bin/prime-run
 ```
 #!/bin/bash
@@ -67,7 +75,7 @@ __NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=NVIDIA_only __GLX_VENDOR_LIBRA
 ```
 chmod 755 /usr/bin/prime-run
 
-### nvidia-smi-sftuff
+## nvidia-smi-sftuff
 ```
 nvidia-smi -q -d CLOCK
 
