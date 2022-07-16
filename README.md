@@ -2,6 +2,16 @@
 # Razer Blade 14 2021
 
 ## Kernel
+
+```
+cd /usr/src/linux
+sudo rm .config*
+sudo make mrproper
+sudo make localmodconfig
+sudo genkernel --menuconfig all
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
 ```
 General setup  --->
     Compiler optimization level (Optimize for performance (-Os))  --->
