@@ -85,7 +85,7 @@ __NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=NVIDIA_only __GLX_VENDOR_LIBRA
 ```
 chmod 755 /usr/bin/prime-run
 
-## nvidia-smi-sftuff
+## nvidia-smi-stuff
 ```
 nvidia-smi -q -d CLOCK
 
