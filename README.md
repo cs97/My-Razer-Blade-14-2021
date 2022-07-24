@@ -64,7 +64,7 @@ Description=PowerMode
 [Service]
 Type=oneshot
 
-ExecStart=/bin/sh -c "/usr/bin/powermode powersave"
+ExecStart=/bin/sh -c "/usr/bin/powermode balanced"
 ExecStop=/bin/sh -c "/usr/bin/powermode powersave"
 RemainAfterExit=yes
 
