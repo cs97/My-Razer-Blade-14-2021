@@ -14,7 +14,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 ```
 General setup  --->
-    Compiler optimization level (Optimize for performance (-Os))  --->
+    Compiler optimization level (Optimize for performance (-O2))  --->
     
 Processor type and features  --->
     Processor family (AMD Zen 3)
