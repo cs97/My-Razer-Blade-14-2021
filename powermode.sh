@@ -1,6 +1,9 @@
 #!/bin/sh
 
-[ -f /usr/bin/cpupower ] || echo "install cpupower"; exit
+[ -f /usr/bin/cpupower ] || {
+	echo "install cpupower"
+	exit
+}
 
 performance(){
        	cpupower frequency-set --max 3800MHz
